@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        #game-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #points {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        #click-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #click-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div id="game-container">
+    <h1>Clicker Game</h1>
+    <p id="points">Points: 0</p>
+    <button id="click-button">Click Me!</button>
+</div>
+
+<script>
+    let points = 0;
+    const pointsDisplay = document.getElementById('points');
+    const clickButton = document.getElementById('click-button');
+
+    clickButton.addEventListener('click', function() {
+        points += 1;
+        pointsDisplay.textContent = 'Points: ' + points;
+    });
+</script>
+
+</body>
+</html>
